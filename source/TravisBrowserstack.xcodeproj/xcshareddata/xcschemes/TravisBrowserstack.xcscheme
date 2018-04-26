@@ -14,6 +14,20 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "4672F9CE1B78759C61864B9DD369DBCF"
+               BuildableName = "Pods_TravisBrowserstack.framework"
+               BlueprintName = "Pods-TravisBrowserstack"
+               ReferencedContainer = "container:Pods/Pods.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "2C703CA52091B08100A94411"
                BuildableName = "TravisBrowserstack.app"
                BlueprintName = "TravisBrowserstack"

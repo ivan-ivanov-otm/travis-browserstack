@@ -1,0 +1,7 @@
+language: swift
+xcode_workspace: ./mobile/OnTheMarket.xcworkspace
+xcode_scheme: OnTheMarketTests
+osx_image: xcode9.3
+podfile: ./mobile/Podfile
+script:
+- xcodebuild clean test -workspace ./mobile/OnTheMarket.xcworkspace/ -scheme OnTheMarket  -destination 'platform=iOS Simulator,name=iPhone 6,OS=9.3' CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO  -quiet
