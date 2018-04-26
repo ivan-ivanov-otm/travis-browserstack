@@ -1,0 +1,160 @@
+PODS:
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
+  - Alamofire (4.5.1)
+  - AlamofireNetworkActivityIndicator (2.2.0):
+    - Alamofire (~> 4.5)
+  - AMPopTip (1.5.2)
+  - Bolts (1.9.0):
+    - Bolts/AppLinks (= 1.9.0)
+    - Bolts/Tasks (= 1.9.0)
+  - Bolts/AppLinks (1.9.0):
+    - Bolts/Tasks
+  - Bolts/Tasks (1.9.0)
+  - Crashlytics (3.10.1):
+    - Fabric (~> 1.7.5)
+  - DateTools (1.7.0)
+  - Fabric (1.7.6)
+  - FBSDKCoreKit (4.31.1):
+    - Bolts (~> 1.7)
+  - FBSDKLoginKit (4.31.1):
+    - FBSDKCoreKit
+  - FirebaseAnalytics (3.9.0):
+    - FirebaseCore (~> 3.6)
+    - FirebaseInstanceID (~> 1.0)
+    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
+  - FirebaseCore (3.6.0):
+    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
+  - FirebaseInstanceID (1.0.10):
+    - FirebaseCore (~> 3.6)
+  - Google/Analytics (3.1.0):
+    - Google/Core
+    - GoogleAnalytics (~> 3.12)
+  - Google/Core (3.1.0):
+    - FirebaseAnalytics (~> 3.2)
+  - GoogleAnalytics (3.17.0)
+  - GoogleMaps (2.6.0):
+    - GoogleMaps/Maps (= 2.6.0)
+  - GoogleMaps/Base (2.6.0)
+  - GoogleMaps/Maps (2.6.0):
+    - GoogleMaps/Base
+  - GoogleSignIn (4.1.2):
+    - GoogleToolboxForMac/NSDictionary+URLArguments (~> 2.1)
+    - GoogleToolboxForMac/NSString+URLArguments (~> 2.1)
+    - GTMOAuth2 (~> 1.0)
+    - GTMSessionFetcher/Core (~> 1.1)
+  - GoogleToolboxForMac/DebugUtils (2.1.3):
+    - GoogleToolboxForMac/Defines (= 2.1.3)
+  - GoogleToolboxForMac/Defines (2.1.3)
+  - GoogleToolboxForMac/NSData+zlib (2.1.3):
+    - GoogleToolboxForMac/Defines (= 2.1.3)
+  - GoogleToolboxForMac/NSDictionary+URLArguments (2.1.3):
+    - GoogleToolboxForMac/DebugUtils (= 2.1.3)
+    - GoogleToolboxForMac/Defines (= 2.1.3)
+    - GoogleToolboxForMac/NSString+URLArguments (= 2.1.3)
+  - GoogleToolboxForMac/NSString+URLArguments (2.1.3)
+  - GTMOAuth2 (1.1.6):
+    - GTMSessionFetcher (~> 1.1)
+  - GTMSessionFetcher (1.1.14):
+    - GTMSessionFetcher/Full (= 1.1.14)
+  - GTMSessionFetcher/Core (1.1.14)
+  - GTMSessionFetcher/Full (1.1.14):
+    - GTMSessionFetcher/Core (= 1.1.14)
+  - IBActionSheet (0.0.4)
+  - ISO8601 (0.5.2)
+  - iVersion (1.11.4)
+  - Kochava (20160601)
+  - Locksmith (3.0.0)
+  - MagicalRecord (2.3.2):
+    - MagicalRecord/Core (= 2.3.2)
+  - MagicalRecord/Core (2.3.2)
+  - MarqueeLabel (3.0.1):
+    - MarqueeLabel/ObjC (= 3.0.1)
+  - MarqueeLabel/ObjC (3.0.1)
+  - MGSwipeTableCell (1.6.6)
+  - PKRevealController (2.0.6)
+  - SnapKit (3.0.2)
+  - SVProgressHUD (2.0.3)
+  - SwiftyJSON (3.1.3)
+  - SZTextView (1.2.2)
+  - UIView+Borders (0.0.2)
+
+DEPENDENCIES:
+  - AFNetworking (= 3.1.0)
+  - Alamofire (= 4.5.1)
+  - AlamofireNetworkActivityIndicator
+  - AMPopTip (= 1.5.2)
+  - Crashlytics
+  - DateTools (= 1.7.0)
+  - Fabric
+  - FBSDKLoginKit
+  - Google/Analytics
+  - GoogleMaps
+  - GoogleSignIn
+  - IBActionSheet (= 0.0.4)
+  - ISO8601 (= 0.5.2)
+  - iVersion (= 1.11.4)
+  - Kochava (= 20160601)
+  - Locksmith (= 3.0.0)
+  - MagicalRecord (= 2.3.2)
+  - MarqueeLabel (= 3.0.1)
+  - MGSwipeTableCell (= 1.6.6)
+  - PKRevealController (= 2.0.6)
+  - SnapKit (= 3.0.2)
+  - SVProgressHUD (= 2.0.3)
+  - SwiftyJSON (= 3.1.3)
+  - SZTextView (= 1.2.2)
+  - UIView+Borders (= 0.0.2)
+
+SPEC CHECKSUMS:
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
+  AlamofireNetworkActivityIndicator: 81e1630e7cfed22a4e4e82a174c59e651dc4f8ca
+  AMPopTip: ec46d7d2ce329328a5e7bfd533da029a9e0f6557
+  Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
+  Crashlytics: aee1a064cbbf99b32efa3f056a5f458d846bc8ff
+  DateTools: 53288ee8b905fdc75897a1e6b5cc0144b14cba60
+  Fabric: f8d42c893bb187326a7968b62abe55c36a987a46
+  FBSDKCoreKit: e08ccfcefa7bc1347a07c276dac9bf6c7fe57024
+  FBSDKLoginKit: 99797ac39252fef6f72600b886f6ee60b4b29cab
+  FirebaseAnalytics: e5fe8486efc01bec33f6bf82e2fa9fce4b124052
+  FirebaseCore: 9691ee2ade70c098d7cf92440f4303f16d83ca75
+  FirebaseInstanceID: b9eedd6846fb5e1f0f7279e1deaa7a7e4cf8392e
+  Google: 98da4b1a60ed0beb80a290387a28333406a1eb90
+  GoogleAnalytics: f42cc53a87a51fe94334821868d9c8481ff47a7b
+  GoogleMaps: 42f91c68b7fa2f84d5c86597b18ceb99f5414c7f
+  GoogleSignIn: d9ef55b10f0aa401a5de2747f59b725e4b9732ac
+  GoogleToolboxForMac: 2501e2ad72a52eb3dfe7bd9aee7dad11b858bd20
+  GTMOAuth2: c77fe325e4acd453837e72d91e3b5f13116857b2
+  GTMSessionFetcher: 390ea358e5a0d0133153806f744662dad933d06b
+  IBActionSheet: 14aac81ebfe94c98c9f072106200c2137453c070
+  ISO8601: 27f07d0a08559759342a5f582170d89288393c89
+  iVersion: 2b6ffe708672cb494ba3cab150a94800c2892e81
+  Kochava: cc6e2b14793845678b29dc47ff1bd8f56d243a11
+  Locksmith: 310b4cc5031af5728bf4db5d4de547a5100c6a3b
+  MagicalRecord: 53bed74b4323b930992a725be713e53b37d19755
+  MarqueeLabel: 80ba85d2b76a9f5fa6c13de337db80bcd94feb1d
+  MGSwipeTableCell: c3bc6e261e7bc06c112909fe3fb8205de286082c
+  PKRevealController: ffb45a16f5a5032ad90a3d16e5cbb0d8e035bd58
+  SnapKit: 2e456761aa92d4d4067a7a5594c18769d451a8ad
+  SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
+  SwiftyJSON: 38a8ea2006779c0fc4c310cb2ee8195327740faf
+  SZTextView: 3a81174dce0710a9ab069bc73a813e6df53b9c82
+  UIView+Borders: d632c8bef679e7f98e913b569e972858742841ce
+
+PODFILE CHECKSUM: cbaabfba39a5076f7da44e599fa9d8516bb94ec8
+
+COCOAPODS: 1.4.0
