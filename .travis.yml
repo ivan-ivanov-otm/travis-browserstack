@@ -3,9 +3,9 @@ osx_image: xcode9.3
 before_script:
 - ./scripts/setup-identity.bash
 script:
-- xcodebuild clean test -workspace ./source/TravisBrowserstack.xcworkspace/ -scheme
-  TravisBrowserstack  -destination 'platform=iOS Simulator,name=iPhone 6,OS=9.3' CODE_SIGN_IDENTITY=""
-  CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO  -quiet
+- xcodebuild archive -workspace ./source/TravisBrowserstack.xcworkspace/ -scheme TravisBrowserstack -configuration Release -derivedDataPath ./build -archivePath ./build/Products/travis-browserstack.xcarchive
+- ls -lah ./build/Products/
+
 env:
   global:
   - secure: c49RY8aN4MUEuauhXp8HkZ1Am0oxc3ySKxbCa6nVSk10vtTvbwDMvuMU7m1ABSVLIqxTh/rSF/gR3gW1tOzwpizSAV2b9cH2MQU0tJtHSVeZhzNXFCx82moJVLOBvzxMI6Lzj7drmi9QNNlppFbvle+IhwWdBdxlMfzLIR4QVDA+7vfi9RMMovpDvtZbjHiyKB79ZRkVhpMY3+pnMkA5nK0YUq2difRb0dbaY+8sKumSlAlQMCvyXMWqo/xoGnz+lQ6pWta9rzQG3stqZsqkRuBxjdtmNG5WB+e+upt6MQbQ/vT8rboXv8UwnpsuACLisysH7zRS/Y0hPorlyj7TKErIFk/U/zBBQlP2Vz/gxFp5LBCETAebobcAj4Db7cDqa8wP+f1B8WY5SQawktGOe3brJXyleoCUwu71UDdgh9Iv/bFDCL4g5dSAYyD5QQtGwYfdz2s/OTgZkoTFm9jN/QzTqFD+ExIPClEXEYO0h5bA4UiwV53bI1B8KoQNy/b1OE3HS4MauEK0KDzbv5Oadv5lljShKBxfFmyURSgwxwrG/eZQPIju4L5s5elSahu+QpSPRHx9JESGS/eYWJy7HnTQWAQMMdiRX3Wt/agZWW4DAZCoC/LrN05iJmdp/DkA8+IqdNK4BLrtWGtsYVGhXyQM1+h4NF8fvY5LCKmciCM=
