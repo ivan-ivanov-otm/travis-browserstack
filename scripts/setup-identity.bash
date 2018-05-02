@@ -1,23 +1,38 @@
 #!/bin/bash
 
+###Constants###
+ENCRYPTED_DEV_CERT=./signing/dev_cert.enc
+DECRYPTED_DEV_CERT=./signing/dev_cert.p12
+ENCRYPTED_PROVISIONING=./signing/dev_provisioning.enc 
+DECRYPTED_PROVISIONING=./signing/dev_provisioning.mobileprovision
 
-#decrypt
-openssl aes-256-cbc -k "$dev_ssl" -in ./scripts/signing/dev_key.enc -d -a -out scripts/certs/dev_key.cer
-openssl aes-256-cbc -k "$dev_ssl" -in ./scripts/signing/dev_provisioning.enc -d -a -out scripts/certs/dev_provisioning.mobileprovision
+APPLE_CERT=./signing/AppleWWDRCA.cer
+
+PROVISIONING_PROFILES=~/Library/MobileDevice/Provisioning\ Profiles/
+
+CUSTOM_KEYCHAIN=ios-build.keychain
+CUSTOM_KEYCHAIN_PATH=~/Library/Keychains/$CUSTOM_KEYCHAIN
+###############
+
+
+#decrypt cert and provisioning profile
+openssl aes-256-cbc -k "$SSL" -d -in $ENCRYPTED_DEV_CERT -out $DECRYPTED_DEV_CERT
+openssl aes-256-cbc -k "$SSL" -d -in $ENCRYPTED_PROVISIONING -out $DECRYPTED_PROVISIONING
+
 
 #create custom keychain
-security create-keychain -p $dev_keypass ios-build.keychain
-security default-keychain -s ios-build.keychain
-security unlock-keychain -p $dev_keypass ios-build.keychain
-security set-keychain-settings -t 3600 -l ~/Library/Keychains/ios-build.keychain
+security create-keychain -p "$CUSTOM_CHAIN_PASS" $CUSTOM_KEYCHAIN
+security default-keychain -s $CUSTOM_KEYCHAIN
+security unlock-keychain -p "$CUSTOM_CHAIN_PASS" $CUSTOM_KEYCHAIN
+security set-keychain-settings -t 3600 -l $CUSTOM_KEYCHAIN_PATH
 
-#import certificates
-security import ./scripts/signing/AppleWWDRCA.cer -k ios-build.keychain -A
-security import ./scripts/signing/dev_key.cer.cer -k ios-build.keychain -A
+#import certificates into custom keychain
+security import $APPLE_CERT -k $CUSTOM_KEYCHAIN -A
+security import $DECRYPTED_DEV_CERT-k $CUSTOM_KEYCHAIN -A -P "$KEYPASS"
 
 # Fix for OS X Sierra that hungs in the codesign step
-#security set-key-partition-list -S apple-tool:,apple: -s -k $SECURITY_PASSWORD ios-build.keychain > /dev/null
+#security set-key-partition-list -S apple-tool:,apple: -s -k $SECURITY_PASSWORD $CUSTOM_KEYCHAIN > /dev/null
 
 #import provisioning profile
-mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
-cp ./scripts/certs/dev_provisioning.mobileprovision ~/Library/MobileDevice/Provisioning\ Profiles/
+mkdir -p $PROVISIONING_PROFILES
+cp $DECRYPTED_PROVISIONING $PROVISIONING_PROFILES
