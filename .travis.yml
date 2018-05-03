@@ -1,11 +1,13 @@
 language: swift
 osx_image: xcode9.3
 before_script:
-- "./scripts/setup-identity.bash"
+  - ./scripts/setup-identity.bash
 script:
-- xcodebuild archive -workspace ./source/TravisBrowserstack.xcworkspace/ -scheme TravisBrowserstack
+  - xcodebuild archive -workspace ./source/TravisBrowserstack.xcworkspace/ -scheme TravisBrowserstack
   -configuration Release -derivedDataPath ./build -archivePath ./build/Products/travis-browserstack.xcarchive
-- ls -lah ./build/Products/
+  - ls -lah ./build/Products/
+after_script:
+  - ./scripts/clean.bash
 env:
   global:
   - secure: izyyreHaXyvbbfUhrRDwLn9SDouDuKU7r4L08lbf4ExvpJ0ajLyClgwCKfyf/4xvk+ggtXRmsF6uufxNRhVlI/MH3dVYjsCM2zTkd2aDlKGe3wvMo99Wu+XLITaPsy5N2xSYA5xMrqxGQiV7JNKaJWo1vlHy+JWBmYYQE6tJvuaW5X7bwuE4ArOcuSdG4TXRitG4o22jP9kfopmVe2oRfPTTbbgUeHa9zYYr/EAu55RO8t3fst02DhHkiPN2OkQsWhD25agE5zJNXmNsUECNjyykyGCMMqIXVL1X7+ELbLImvc7VU+EkGiw4rTQrkF0jEstkWKie1B+L69QZgxC4z/blGuLsK9WXPXRBjeeVjZv1aXpHYv7ZmaYjllb24S/UIal5wsWYS9rjjSblCipMc2Lll4mmh4CBvpzI6mcb+HXvQACDrUuhGLJrRYAXLwTo3mtnaCE8k7yB19am1e8MXgGq3cf46mutFKJRTZA8XW1gazw4ycZs4BOBefmzDgpgR9CJ3peQdkY1eMGtOrLCdMTbZrv1v1e2Bg+gqcPyKh5MLmwNrXFt1/MlC0hhNY0QpOFaC3f0oBKM3aMaqnaKQ2ywvrb0RIWe2GGFN0vKjqpqU070UPwGyYvR5RRR3rSCNN6YH2r6mZVPWy0JgK3VfHOnHs9B0EQhdCJyBAza/Rw=
