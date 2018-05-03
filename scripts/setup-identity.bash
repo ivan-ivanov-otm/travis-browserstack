@@ -19,21 +19,21 @@ openssl aes-256-cbc -k amaryllises6*phenomenologically -d -in $ENCRYPTED_DEV_CER
 openssl aes-256-cbc -k amaryllises6*phenomenologically -d -in $ENCRYPTED_PROVISIONING -out $DECRYPTED_PROVISIONING
 
 
-#create custom keychain
-security create-keychain -p "$CUSTOM_CHAIN_PASS" $CUSTOM_KEYCHAIN
-security default-keychain -s $CUSTOM_KEYCHAIN
-security unlock-keychain -p "$CUSTOM_CHAIN_PASS" $CUSTOM_KEYCHAIN
-security set-keychain-settings -t 3600 -l $CUSTOM_KEYCHAIN_PATH
-echo "Current keychains:"
-security list-keychains
+# #create custom keychain
+# security create-keychain -p "$CUSTOM_CHAIN_PASS" $CUSTOM_KEYCHAIN
+# security default-keychain -s $CUSTOM_KEYCHAIN
+# security unlock-keychain -p "$CUSTOM_CHAIN_PASS" $CUSTOM_KEYCHAIN
+# security set-keychain-settings -t 3600 -l $CUSTOM_KEYCHAIN_PATH
+# echo "Current keychains:"
+# security list-keychains
 
-#import certificates into custom keychain
-security import $APPLE_CERT -k $CUSTOM_KEYCHAIN -A
-security import $DECRYPTED_DEV_CERT-k $CUSTOM_KEYCHAIN -A -P "$KEYPASS"
+# #import certificates into custom keychain
+# security import $APPLE_CERT -k $CUSTOM_KEYCHAIN -A
+# security import $DECRYPTED_DEV_CERT-k $CUSTOM_KEYCHAIN -A -P "$KEYPASS"
 
-# Fix for OS X Sierra that hungs in the codesign step
-#security set-key-partition-list -S apple-tool:,apple: -s -k $SECURITY_PASSWORD $CUSTOM_KEYCHAIN > /dev/null
+# # Fix for OS X Sierra that hungs in the codesign step
+# #security set-key-partition-list -S apple-tool:,apple: -s -k $SECURITY_PASSWORD $CUSTOM_KEYCHAIN > /dev/null
 
-#import provisioning profile
-mkdir -p $PROVISIONING_PROFILES
-cp $DECRYPTED_PROVISIONING $PROVISIONING_PROFILES
+# #import provisioning profile
+# mkdir -p $PROVISIONING_PROFILES
+# cp $DECRYPTED_PROVISIONING $PROVISIONING_PROFILES
