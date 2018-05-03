@@ -24,8 +24,7 @@ security create-keychain -p "$CUSTOM_CHAIN_PASS" $CUSTOM_KEYCHAIN
 security default-keychain -s $CUSTOM_KEYCHAIN
 security unlock-keychain -p "$CUSTOM_CHAIN_PASS" $CUSTOM_KEYCHAIN
 security set-keychain-settings -t 3600 -l $CUSTOM_KEYCHAIN_PATH
-echo "Current keychains:"
-security list-keychains
+
 
 # #import certificates into custom keychain
 # security import $APPLE_CERT -k $CUSTOM_KEYCHAIN -A
