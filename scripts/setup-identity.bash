@@ -21,9 +21,9 @@ openssl aes-256-cbc -k $SSL -d -in $ENCRYPTED_PROVISIONING -out $DECRYPTED_PROVI
 
 #create custom keychain
 security create-keychain -p "$CUSTOM_CHAIN_PASS" $CUSTOM_KEYCHAIN
-security default-keychain -s $CUSTOM_KEYCHAIN
-security unlock-keychain -p "$CUSTOM_CHAIN_PASS" $CUSTOM_KEYCHAIN
-security set-keychain-settings -t 3600 -l $CUSTOM_KEYCHAIN_PATH
+# security default-keychain -s $CUSTOM_KEYCHAIN
+# security unlock-keychain -p "$CUSTOM_CHAIN_PASS" $CUSTOM_KEYCHAIN
+# security set-keychain-settings -t 3600 -l $CUSTOM_KEYCHAIN_PATH
 
 
 # #import certificates into custom keychain
