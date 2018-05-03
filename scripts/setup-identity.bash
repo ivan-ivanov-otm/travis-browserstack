@@ -28,10 +28,10 @@ security set-keychain-settings -t 3600 -l $CUSTOM_KEYCHAIN_PATH
 
 # #import certificates into custom keychain
 security import $APPLE_CERT -k $CUSTOM_KEYCHAIN -A
-security import $DECRYPTED_DEV_CERT-k $CUSTOM_KEYCHAIN -A -P "$KEYPASS"
+security import $DECRYPTED_DEV_CERT -k $CUSTOM_KEYCHAIN -A -P "$KEYPASS"
 
 # Fix for OS X Sierra that hungs in the codesign step
-security set-key-partition-list -S apple-tool:,apple: -s -k $SECURITY_PASSWORD $CUSTOM_KEYCHAIN > /dev/null
+#security set-key-partition-list -S apple-tool:,apple: -s -k $SECURITY_PASSWORD $CUSTOM_KEYCHAIN > /dev/null
 
 #import provisioning profile
 mkdir -p $PROVISIONING_PROFILES
