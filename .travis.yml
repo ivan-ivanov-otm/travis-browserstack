@@ -5,7 +5,6 @@ before_script:
 script:
   - xcodebuild archive -workspace ./source/TravisBrowserstack.xcworkspace/ -scheme TravisBrowserstack
   -configuration Release -derivedDataPath ./build -archivePath ./build/Products/travis-browserstack.xcarchive
-  - ls -lah ./build/Products/
 after_script:
   - ./scripts/clean.bash
 env:
