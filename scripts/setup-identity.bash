@@ -15,8 +15,8 @@ CUSTOM_KEYCHAIN_PATH=~/Library/Keychains/$CUSTOM_KEYCHAIN
 
 
 #decrypt cert and provisioning profile
-openssl aes-256-cbc -k amaryllises6*phenomenologically -d -in $ENCRYPTED_DEV_CERT -out $DECRYPTED_DEV_CERT
-openssl aes-256-cbc -k amaryllises6*phenomenologically -d -in $ENCRYPTED_PROVISIONING -out $DECRYPTED_PROVISIONING
+openssl aes-256-cbc -k $SSL -d -in $ENCRYPTED_DEV_CERT -out $DECRYPTED_DEV_CERT
+openssl aes-256-cbc -k $SSL -d -in $ENCRYPTED_PROVISIONING -out $DECRYPTED_PROVISIONING
 
 
 # #create custom keychain
