@@ -9,7 +9,7 @@ DECRYPTED_PROVISIONING=./scripts/signing/dev_provisioning.mobileprovision
 APPLE_CERT=./scripts/signing/AppleWWDRCA.cer
 
 PROVISIONING_PROFILES=~/Library/MobileDevice/Provisioning\ Profiles/
-
+CUSTOM_KEYCHAIN=ios-build
 CUSTOM_KEYCHAIN_PATH=~/Library/Keychains/$CUSTOM_KEYCHAIN
 ###############
 
@@ -19,13 +19,13 @@ openssl aes-256-cbc -k $SSL -d -in $ENCRYPTED_DEV_CERT -out $DECRYPTED_DEV_CERT
 openssl aes-256-cbc -k $SSL -d -in $ENCRYPTED_PROVISIONING -out $DECRYPTED_PROVISIONING
 
 
-# #create custom keychain
-# security create-keychain -p "$CUSTOM_CHAIN_PASS" $CUSTOM_KEYCHAIN
-# security default-keychain -s $CUSTOM_KEYCHAIN
-# security unlock-keychain -p "$CUSTOM_CHAIN_PASS" $CUSTOM_KEYCHAIN
-# security set-keychain-settings -t 3600 -l $CUSTOM_KEYCHAIN_PATH
-# echo "Current keychains:"
-# security list-keychains
+#create custom keychain
+security create-keychain -p "$CUSTOM_CHAIN_PASS" $CUSTOM_KEYCHAIN
+security default-keychain -s $CUSTOM_KEYCHAIN
+security unlock-keychain -p "$CUSTOM_CHAIN_PASS" $CUSTOM_KEYCHAIN
+security set-keychain-settings -t 3600 -l $CUSTOM_KEYCHAIN_PATH
+echo "Current keychains:"
+security list-keychains
 
 # #import certificates into custom keychain
 # security import $APPLE_CERT -k $CUSTOM_KEYCHAIN -A
