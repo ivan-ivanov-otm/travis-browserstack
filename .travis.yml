@@ -4,6 +4,7 @@ before_script:
   - ./scripts/setup-identity.bash
 script:
   - security list-keychains
+  - ls ~/Library/MobileDevice/Provisioning\ Profiles/
   - xcodebuild archive -workspace ./source/TravisBrowserstack.xcworkspace/ -scheme TravisBrowserstack -configuration Release -derivedDataPath ./build -archivePath ./build/Products/travis-browserstack.xcarchive -quiet
 after_script:
   - ./scripts/clean.bash

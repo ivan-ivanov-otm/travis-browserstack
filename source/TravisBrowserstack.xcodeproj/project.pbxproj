@@ -493,7 +493,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = YES;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = ECSJUVW9ZH;
 				INFOPLIST_FILE = TravisBrowserstack/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -501,9 +501,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.onthemarket.TravisBrowserstack;
+				PRODUCT_BUNDLE_IDENTIFIER = com.onthemarket.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "fca04dee-d99a-4df2-9262-c679fb04edf1";
+				PROVISIONING_PROFILE_SPECIFIER = "Continuos Integration";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -516,7 +517,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = YES;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = ECSJUVW9ZH;
 				INFOPLIST_FILE = TravisBrowserstack/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -524,9 +525,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.onthemarket.TravisBrowserstack;
+				PRODUCT_BUNDLE_IDENTIFIER = com.onthemarket.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "fca04dee-d99a-4df2-9262-c679fb04edf1";
+				PROVISIONING_PROFILE_SPECIFIER = "Continuos Integration";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

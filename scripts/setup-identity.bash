@@ -4,7 +4,7 @@
 ENCRYPTED_DEV_CERT=./scripts/signing/dev_cert.enc
 DECRYPTED_DEV_CERT=./scripts/signing/dev_cert.p12
 ENCRYPTED_PROVISIONING=./scripts/signing/prov.enc 
-DECRYPTED_PROVISIONING=./scripts/signing/dev_provisioning.mobileprovision
+DECRYPTED_PROVISIONING=./scripts/signing/fca04dee-d99a-4df2-9262-c679fb04edf1.mobileprovision
 
 APPLE_CERT=./scripts/signing/AppleWWDRCA.cer
 
