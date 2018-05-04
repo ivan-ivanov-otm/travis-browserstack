@@ -12,5 +12,10 @@
   <true/>
   <key>uploadSymbols</key>
   <true/>
+  <key>provisioningProfiles</key>
+    <dict>
+        <key>com.onthemarket.ios</key>
+        <string>Continuos Integration</string>
+    </dict>
 </dict>
 </plist>
