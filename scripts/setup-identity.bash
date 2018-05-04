@@ -30,7 +30,7 @@ security import $APPLE_CERT -k $CUSTOM_KEYCHAIN -A
 security import $DECRYPTED_DEV_CERT -k $CUSTOM_KEYCHAIN -A -P "$KEYPASS"
 
 #Fix for OS X Sierra that hungs in the codesign step
-security set-key-partition-list -S apple-tool:,apple: -s -k $KEYPASS $CUSTOM_KEYCHAIN > /dev/null
+security set-key-partition-list -S apple-tool:,apple: -s -k $CUSTOM_CHAIN_PASS $CUSTOM_KEYCHAIN > /dev/null
 
 #import provisioning profile
 mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles/
