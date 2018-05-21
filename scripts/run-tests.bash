@@ -1,7 +1,7 @@
 #!/bin/bash
 
 TESTS_DIR="tests"
-BINARY_PATH="../build/Products/IPA/TravisBrowserstack.ipa"
+BINARY_PATH="$TRAVIS_BUILD_DIR/build/Products/IPA/TravisBrowserstack.ipa"
 
 cd $TESTS_DIR
 
