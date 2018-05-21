@@ -1,7 +1,7 @@
 #!/bin/bash
 
-TESTS_DIR="tests"
-BINARY_PATH=$1
+TESTS_DIR=$1
+BINARY_PATH=$2
 
 cd $TESTS_DIR
 

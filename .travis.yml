@@ -6,7 +6,7 @@ script:
 - xcodebuild archive -workspace ./source/TravisBrowserstack.xcworkspace -scheme TravisBrowserstack -configuration Release -derivedDataPath ./build -archivePath ./build/Products/travis-browserstack.xcarchive -quiet
 - xcodebuild -exportArchive -archivePath ./build/Products/travis-browserstack.xcarchive -exportOptionsPlist ./scripts/export-options.plist -exportPath ./build/Products/IPA/ -quiet
 - "./scripts/retrieve-tests.bash"
-- "./scripts/run-tests.bash $TRAVIS_BUILD_DIR/build/Products/IPA/TravisBrowserstack.ipa"
+- "./scripts/run-tests.bash tests $TRAVIS_BUILD_DIR/build/Products/IPA/TravisBrowserstack.ipa"
 after_script:
 - "./scripts/clean.bash"
 env:
