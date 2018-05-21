@@ -1,11 +1,10 @@
 #!/bin/bash
 
-APP_ENTRY="$HOME/tests/app.js"
+TESTS_DIR="$HOME/tests"
 BINARY_PATH="./build/Products/IPA/TravisBrowserstack.ipa"
 
-echo $APP_ENTRY
-echo $BINARY_PATH
-echo $BROWSERSTACK_USER
-echo $BROWSERSTACK_PASS
+cd $TESTS_DIR
 
-node $APP_ENTRY -u $BROWSERSTACK_USER -p $BROWSERSTACK_PASS -f $BINARY_PATH
+node app.js -u $BROWSERSTACK_USER -p $BROWSERSTACK_PASS -f $BINARY_PATH
+
+cd ..
